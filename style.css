@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "Source Sans Pro SC";
+  src: url('fonts/SourceSansProSC-Regular.woff');
+}
+
+html {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+article {
+  margin: auto;
+  width: 60em;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#main-container {
+  flex-basis: 35em;
+}
+
+#notes-container {
+  flex-basis: 20em;
+  position: relative;
+}
+
+#main-container, #notes-container {
+  text-align: justify;
+  hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+#notes-container .note-node {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding-bottom: 0.5em;
+}
+
+.neword, .neword dt, .neword dd {
+  display: inline;
+  margin: 0;
+}
+.neword dt::after {
+  content: ": ";
+}
+
+.js-marginnote-content {
+  display: none;
+}
+
+.smallcaps {
+  font-family: "Source Sans Pro SC";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.dialogue p {
+  display: inline;
+}
+
+.dialogue {
+  padding-left: 2em;
+  list-style-type: none;
+}
+
+.dialogue li {
+  margin-bottom: 0.5em;
+}
+
+p.speaker {
+  font-family: "Source Sans Pro SC";
+  font-weight: normal;
+  font-style: normal;
+}
+
+p.speaker::after {
+  content: ": ";
+}
+
+@supports (font-variant-caps: small-caps) {
+  .smallcaps, p.speaker {
+    font-family: "Source Sans Pro";
+    font-variant-caps: small-caps;
+  }
+}
